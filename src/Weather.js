@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate"
+import Sunrise from "./Sunrise"
+import Sunset from "./Sunset"
+
 import axios from "axios";
 
 import "./Weather.css"
@@ -10,12 +14,15 @@ function handleResponse(response) {
   setWeatherData({
     ready: true,
     city: response.data.name,
-    date: "Thursday Jan 7, 22:00",
+    date: new Date(response.data.dt * 1000),
     temperature: Math.round(response.data.main.temp),
     iconUrl: "https://raw.githubusercontent.com/manifestinteractive/weather-underground-icons/HEAD/dist/icons/black/png/256x256/tstorms.png",
     description: response.data.weather[0].description,
     humidity: response.data.main.humidity,
-    wind: response.data.wind.speed
+    wind: response.data.wind.speed,
+    sunrise: new Date(response.data.sys.sunrise * 1000),
+    sunset: new Date(response.data.sys.sunset * 1000)
+
   })
 }
 
@@ -35,7 +42,7 @@ return(
       <div className="row">
         <div className="col-6">
           <h1>{weatherData.city}</h1>
-          <p>Last updated at: {weatherData.date}</p>
+          <div><FormattedDate date={weatherData.date} /></div>
         </div>
         <div className="col-6">
           <p><span className="temperature">{weatherData.temperature}</span> <span className="units">ºC | ºF</span></p>
@@ -50,8 +57,8 @@ return(
            <li className="text-capitalize">"{weatherData.description}"</li>
            <li>Humidity: {weatherData.humidity}%</li>
            <li>Wind: {weatherData.wind} km/h</li>
-           <li>Sunrise: 07:54</li>
-           <li>Sunset: 17:30</li>
+           <li><Sunrise sunrise={weatherData.sunrise} /></li>
+           <li><Sunset sunset={weatherData.sunset} /></li>
           </ul>
         </div>
       </div>
