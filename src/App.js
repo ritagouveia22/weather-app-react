@@ -8,10 +8,10 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Weather />
-          <footer>This project was coded by Rita and it's <a href="https://github.com/ritagouveia22/weather-app-react/" target="_blank" rel="noreferrer">
+        <small>This project was coded by Rita and it's <a href="https://github.com/ritagouveia22/weather-app-react/" target="_blank" rel="noreferrer">
 open-sourced on GitHub
       </a> and hosted on Netlify.
-      </footer>
+      </small>
       </div>
      </div>
    

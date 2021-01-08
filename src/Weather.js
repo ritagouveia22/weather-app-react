@@ -18,21 +18,19 @@ export default function Weather() {
       <div className="row">
         <div className="col-6">
           <h1>Lisbon</h1>
+          <p>Last updated at: Thursday Jan 7, 22:00</p>
         </div>
         <div className="col-6">
-          <p>7 ºC | ºF</p>
+          <p><span className="temperature">7</span> <span className="units">ºC | ºF</span></p>
         </div>
       </div>
-      <div className="row">
+      <div className="row mt-3">
         <div className="col-6">
-          <ul>
-            <li>Last updated at: Thursday Jan 7, 22:00</li>
-            <li>"Clear Sky"</li>
-          </ul>
           <img src="https://raw.githubusercontent.com/manifestinteractive/weather-underground-icons/HEAD/dist/icons/black/png/256x256/tstorms.png" alt="Clear Sky"/>
         </div>
         <div className="col-6">
           <ul>
+           <li>"Clear Sky"</li>
            <li>Humidity: 70%</li>
            <li>Wind: 5 km/h</li>
            <li>Sunrise: 07:54</li>

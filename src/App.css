@@ -1,0 +1,10 @@
+.App {
+  color: #394867;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.App small {
+  text-align: center;
+  display: block;
+}
