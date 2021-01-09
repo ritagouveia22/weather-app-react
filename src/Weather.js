@@ -18,7 +18,7 @@ function handleResponse(response) {
     iconUrl: "https://raw.githubusercontent.com/manifestinteractive/weather-underground-icons/HEAD/dist/icons/black/png/256x256/tstorms.png",
     description: response.data.weather[0].description,
     humidity: response.data.main.humidity,
-    wind: response.data.wind.speed,
+    wind: Math.round(response.data.wind.speed),
     sunrise: new Date(response.data.sys.sunrise * 1000),
     sunset: new Date(response.data.sys.sunset * 1000)
 
