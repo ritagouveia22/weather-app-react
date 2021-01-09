@@ -23,7 +23,7 @@ export default function WeatherDetails(props) {
         </div>
         <div className="col-6">
           <ul>
-           <li className="text-capitalize">"{props.data.description}"</li>
+           <li className="text-capitalize"><i class="fas fa-angle-double-left"></i> {props.data.description} <i class="fas fa-angle-double-right"></i></li>
            <li>Humidity: {props.data.humidity}%</li>
            <li>Wind: {props.data.wind} km/h</li>
            <li><Sunrise sunrise={props.data.sunrise} /></li>
