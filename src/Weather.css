@@ -14,7 +14,7 @@
   margin: 10px auto 0;
   color: #fff5ea;
   font-weight: 900;
-  font-size: 58px;
+  font-size: 50px;
 }
 
 .Weather ul {
@@ -35,12 +35,12 @@
 .Weather .temperature {
   color: #fff5ea;
   font-weight: 900;
-  font-size: 58px;
+  font-size: 50px;
 }
 
 .Weather .units {
   color: #fff5ea;
   position: relative;
-  top: -30px;
+  top: -25px;
   line-height: 1;
 }
