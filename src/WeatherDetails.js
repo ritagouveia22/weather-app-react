@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate"
 import Sunrise from "./Sunrise"
 import Sunset from "./Sunset"
 import WeatherTemperature from "./WeatherTemperature"
+import "./WeatherDetails.css"
 
 export default function WeatherDetails(props) {
     return (
@@ -24,7 +25,7 @@ export default function WeatherDetails(props) {
         </div>
         <div className="col-6">
           <ul>
-           <li className="text-capitalize"><i className="fas fa-angle-double-left"></i> {props.data.description} <i className="fas fa-angle-double-right"></i></li>
+           <li className="text-capitalize description"><i className="fas fa-angle-double-left"></i> {props.data.description} <i className="fas fa-angle-double-right"></i></li>
            <li>Humidity: {props.data.humidity}%</li>
            <li>Wind: {props.data.wind} km/h</li>
            <li><Sunrise sunrise={props.data.sunrise} /></li>
