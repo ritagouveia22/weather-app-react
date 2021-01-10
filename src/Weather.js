@@ -15,7 +15,7 @@ function handleResponse(response) {
     city: response.data.name,
     date: new Date(response.data.dt * 1000),
     temperature: Math.round(response.data.main.temp),
-    iconUrl: "https://raw.githubusercontent.com/manifestinteractive/weather-underground-icons/HEAD/dist/icons/black/png/256x256/tstorms.png",
+    iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     description: response.data.weather[0].description,
     humidity: response.data.main.humidity,
     wind: Math.round(response.data.wind.speed),
