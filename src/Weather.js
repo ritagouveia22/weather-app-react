@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherDetails from "./WeatherDetails"
+import WeatherForecast from "./WeatherForecast"
 
 import axios from "axios";
 
@@ -20,7 +21,9 @@ function handleResponse(response) {
     humidity: response.data.main.humidity,
     wind: Math.round(response.data.wind.speed),
     sunrise: new Date(response.data.sys.sunrise * 1000),
-    sunset: new Date(response.data.sys.sunset * 1000)
+    sunset: new Date(response.data.sys.sunset * 1000),
+    lon: response.data.coord.lon,
+    lat: response.data.coord.lat
 
   })
 }
@@ -65,6 +68,7 @@ return(
         </div>
       </form>
       <WeatherDetails data={weatherData}/>
+      <WeatherForecast city={weatherData.city} lon={weatherData.lon} lat={weatherData.lat} />
     </div>
   )
 } else {
