@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate"
 import Sunrise from "./Sunrise"
 import Sunset from "./Sunset"
+import WeatherTemperature from "./WeatherTemperature"
 
 export default function WeatherDetails(props) {
     return (
@@ -14,7 +15,7 @@ export default function WeatherDetails(props) {
           </div>
         </div>
         <div className="col-6">
-            <p><span className="temperature">{props.data.temperature}</span> <span className="units">ºC | ºF</span></p>
+          <WeatherTemperature celsius={props.data.temperature} />
         </div>
     </div>
     <div className="row mt-3">
