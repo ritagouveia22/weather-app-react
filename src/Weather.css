@@ -3,7 +3,8 @@
   margin: 10px auto 5px;
   padding: 30px;
   border-radius: 5px;
-  max-width: 600px;
+  width: 600px;
+  max-width: 80%;
 }
 
 .Weather form {
@@ -14,7 +15,7 @@
   margin: 10px auto 0;
   color: #fff5ea;
   font-weight: 900;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .Weather ul {
@@ -35,12 +36,12 @@
 .Weather .temperature {
   color: #fff5ea;
   font-weight: 900;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .Weather .units {
   color: #fff5ea;
   position: relative;
-  top: -25px;
+  top: -18px;
   line-height: 1;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import "./FormattedDate.css"
 
 export default function FormattedDate(props) {
     let daysOfWeek = [
@@ -18,6 +19,6 @@ export default function FormattedDate(props) {
     if (minutes < 10) {
         minutes = `0${minutes}`
     }
-    return <div>Last updated at: {dayOfWeek} {month} {day}, {hours}h{minutes}
+    return <div className="FormattedDate">Last updated at: {dayOfWeek} {month} {day}, {hours}h{minutes}
         </div>
 }
